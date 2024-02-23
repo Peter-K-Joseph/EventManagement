@@ -39,8 +39,6 @@ public class WebSecurityConfig {
 			"/login",
 			"/error",
 			"/api-docs",
-			"/api/v1",
-			"/api/v1/**",
 			"/api-docs/**",
 			"/swagger-ui/**",
 			//"/api/v1/**" // adding this for temporary frontend development ** comment it out afterwards fix on line 118**

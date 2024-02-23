@@ -2,6 +2,7 @@ package com.ictak.springsecurityclient.service;
 
 import java.util.List;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.ictak.springsecurityclient.entity.Vendors;
@@ -9,6 +10,7 @@ import com.ictak.springsecurityclient.repository.VendorRepository;
 
 @Service
 public class VendorServiceImpl implements VendorService {
+    @Autowired
     private VendorRepository vendorRepository;
 
     @Override

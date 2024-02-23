@@ -21,7 +21,7 @@ public class VendorController {
         return ResponseEntity.ok().body(vendorService.getAllVendors());
     }
 
-    @GetMapping("/vendors/")
+    @GetMapping("/vendors/{id}")
     public ResponseEntity<Vendors> getVendorById(@PathVariable long id) {
         return ResponseEntity.ok().body(vendorService.getVendorById(id));
     }
@@ -31,12 +31,12 @@ public class VendorController {
         return ResponseEntity.ok().body(this.vendorService.createVendor(attendee));
     }
 
-    @PutMapping("/vendors/")
+    @PutMapping("/vendors/{id}")
     public ResponseEntity<Vendors> updateVendor(@PathVariable long id, @RequestBody Vendors attendee) {
         return ResponseEntity.ok().body(this.vendorService.updateVendor(id, attendee));
     }
 
-    @DeleteMapping("/vendors/")
+    @DeleteMapping("/vendors/{id}")
     public ResponseEntity<?> deleteVendor(@PathVariable long id) {
         this.vendorService.deleteVendor(id);
         return ResponseEntity.status(HttpStatus.OK).build();
