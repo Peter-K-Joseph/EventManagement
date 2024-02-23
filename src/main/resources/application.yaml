@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+#        password: Peter@2002
+        password: 
+        url: jdbc:mysql://${MYSQL_HOST:localhost}:3306/temp
+        # url: jdbc:mysql://192.168.26.239:3306/temp
+        username: root
+    jpa:
+        show-sql: true  
+        hibernate:
+            ddl-auto: update
+springdoc:
+  api-docs:
+    path: /api-docs
+  swagger-ui:
+    try-it-out-enabled: false
+    default-model-expand-depth: -1
+
+logging:
+  level:
+      '[org.springframework.security]': DEBUG
+
+jwt:
+  secretKey: secrets8o7gvk7icretsecret1
+  tokenPrefix: "Bearer "
